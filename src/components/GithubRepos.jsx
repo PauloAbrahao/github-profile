@@ -1,15 +1,11 @@
 import React from "react";
 import { BiBookAlt } from "react-icons/bi";
 import { AiOutlineLink } from "react-icons/ai";
+import { useFetch } from "../hooks/Fetch";
+import "./GithubRepos.css";
 
 const GithubRepos = () => {
-  const [info, setInfo] = React.useState(null);
-
-  React.useEffect(() => {
-    fetch(`https://api.github.com/users/PauloAbrahao/repos`)
-      .then((res) => res.json())
-      .then((userReponse) => setInfo(userReponse));
-  }, []);
+  const { info } = useFetch();
 
   if (!info) return null;
   else
@@ -23,14 +19,15 @@ const GithubRepos = () => {
                   <BiBookAlt />
                   <h3 className="name">{i.name}</h3>
                 </div>
+
                 <p className="description">{i.description}</p>
 
-                <a className="link-icon">
+                <div className="link-icon">
                   <AiOutlineLink />
                   <a href={i.html_url} target="_blank" className="link">
                     Dê uma olhada
                   </a>
-                </a>
+                </div>
                 <small>{i.language}</small>
               </li>
             </ul>

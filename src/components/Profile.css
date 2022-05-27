@@ -1,0 +1,20 @@
+.profile {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: 2rem;
+}
+
+#nome {
+  font-size: 1.2rem;
+  margin-top: .8rem;
+
+  color: var(--color-name);
+}
+
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+}

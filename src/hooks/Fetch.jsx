@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../components/Footer";
 import GithubRepos from "../components/GithubRepos";
 import Profile from "../components/Profile";
 
@@ -17,6 +18,7 @@ export const FetchProvider = (props) => {
     <FetchContext.Provider value={{ info }}>
       <Profile />
       <GithubRepos />
+      <Footer />
     </FetchContext.Provider>
   );
 };

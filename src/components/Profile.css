@@ -18,3 +18,14 @@
   width: 150px;
   border-radius: 50%;
 }
+/* MEDIA QUERIES FOR MEDIUM DEVICES */
+
+@media screen and (max-width: 1024px) {
+  .profile-pic {
+    width: 100px;
+  }
+
+  #nome {
+    font-size: 1rem;
+  }
+}
